@@ -10,7 +10,7 @@ module OmniAuth
       }
 
       def callback_url
-        full_host + script_name + callback_path
+        options[:callback_url] || (full_host + script_name + callback_path)
       end
 
       def request_phase
